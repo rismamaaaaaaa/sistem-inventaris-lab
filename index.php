@@ -5,11 +5,15 @@ include "koneksi.php";
 if (isset($_GET['cari'])) {
     $cari = $_GET['cari'];
 
-    $query = mysqli_query($koneksi, "SELECT * FROM barang
-        WHERE nama_barang LIKE '%$cari%'
+    $query = mysqli_query($koneksi, "SELECT barang.*, lokasi.gambar
+        FROM barang
+        LEFT JOIN lokasi ON barang.lokasi_ruang = lokasi.nama_lokasi
+        WHERE barang.nama_barang LIKE '%$cari%'
         ");
 } else {
-    $query = mysqli_query($koneksi, "SELECT * FROM barang");
+    $query = mysqli_query($koneksi, "SELECT barang.*, lokasi.gambar
+        FROM barang
+        LEFT JOIN lokasi ON barang.lokasi_ruang = lokasi.nama_lokasi");
 }
 ?>
 
@@ -47,6 +51,7 @@ if (isset($_GET['cari'])) {
             <th>Spesifikasi</th>
             <th>Kondisi</th>
             <th>Lokasi Ruang</th>
+            <th>Gambar</th>
             <th>Aksi</th>
         </tr>
         <?php
@@ -61,6 +66,13 @@ if (isset($_GET['cari'])) {
             <td><?php echo $data['spesifikasi']; ?></td>
             <td><?php echo $data['kondisi']; ?></td>
             <td><?php echo $data['lokasi_ruang']; ?></td>
+            <td>
+                <?php if ($data['gambar']) { ?>
+                    <img src="uploads/lokasi/<?php echo $data['gambar']; ?>" alt="" width="100">
+                <?php } else { ?>
+                    Tidak ada gambar
+                <?php } ?>
+            </td>
             <td>
                 <a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a> |
                 <a href="hapus.php?id=<?php echo $data['id']; ?>" onclick="return confirm('Yakin hapus data ini?')">Hapus</a>
