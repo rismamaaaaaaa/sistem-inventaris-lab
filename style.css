@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+ body {
+    background-color: #f4f4f4;
+    padding: 30px;
+ }
+ h2{
+    text-align: center;
+    color:#5b2c6f;
+    margin-bottom: 20px;
+ }
+ 
+ a{
+    text-decoration: none;
+    color:#8e44ad;
+ }
+ a.hover{
+    clor: #6c3483;
+ }
+  
+ table{
+    width: 100%;
+    border-collapse: collapse;
+    background:white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ }
+
+ th{
+    background-color: #8e44ad;
+    color: white;
+    padding: 12px;
+    text-align: left;
+ }
+
+ td{
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+ }
+
+ tr.hover{
+    background-color: #f4ecf7;
+ }
+
+ form{
+    max-width: 400px;
+    margin: 0 auto;    
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ }
+
+ label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5b2c6f;
+ }
+    input, select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    }
+
+button{
+    background-color: #8e44ad;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;                                                              
+    cursor: pointer;
+}
+
+.login-container button{
+    width: 100%;
+}
+
+button:hover{
+    background-color: #6c3483;
+}

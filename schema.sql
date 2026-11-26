@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS inventaris;
 
-USE inventaris;
+
+USE if0_43512371_inventaris;
 
 CREATE TABLE IF NOT EXISTS barang (
     id INT AUTO_INCREMENT PRIMARY KEY,

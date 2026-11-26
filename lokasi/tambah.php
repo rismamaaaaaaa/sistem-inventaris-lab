@@ -29,6 +29,7 @@ if (isset($_POST['simpan'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Lokasi</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <h2>Tambah Lokasi</h2>

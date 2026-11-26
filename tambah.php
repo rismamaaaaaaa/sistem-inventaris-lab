@@ -12,7 +12,7 @@ if (isset ($_POST['simpan'])) {
 
     $sql = "INSERT INTO barang (kode_barang, nama_barang, jumlah, spesifikasi, kondisi, lokasi_ruang)
             VALUES ('$kode_barang', '$nama_barang', '$jumlah', '$spesifikasi', '$kondisi', '$lokasi_ruang')";
-    $simpan = mysqli_query($koneksi, $sql);
+    $simpan = mysqli_query($konekslli, $sql);
 
     if ($simpan) {
         header("Location: index.php?pesan=Data berhasil ditambahkan");
@@ -29,7 +29,8 @@ if (isset ($_POST['simpan'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Barang</title>
-</head>
+    <link rel="stylesheet" href="style.css">
+</head>      
 <body>
     <h2>Tambah Barang</h2>
     <form action="" method="post">

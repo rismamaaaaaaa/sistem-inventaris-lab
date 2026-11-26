@@ -23,6 +23,7 @@ if (isset($_GET['cari'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Inventaris Lab & Sarpras SMK</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>Sistem Inventaris Lab & Sarpras SMK</h2>
@@ -31,6 +32,7 @@ if (isset($_GET['cari'])) {
         <input type="text" name="cari" placeholder="Cari barang">
         <button type="submit">Cari</button>
         <a href="index.php">Reset</a>
+        <a href="logout.php" class="logout" onclick="return confirm('yakin ingin logout?')">Logout</a>
     </form>
     <br><br>
 
